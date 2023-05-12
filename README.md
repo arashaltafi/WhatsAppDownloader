@@ -30,13 +30,13 @@ see project in [caffe bazaar](https://cafebazaar.ir/app/com.arash.altafi.whatsap
   style="display: inline-block; margin: 0 auto; height: 680px; width: 380px">
   
 <img
-  src="/screen_shot/5.png"
+  src="/screen_shot/5.jpg"
   alt="Screen Shot 5"
   title="Screen Shot 5"
   style="display: inline-block; margin: 0 auto; height: 680px; width: 380px">
   
 <img
-  src="/screen_shot/6.png"
+  src="/screen_shot/6.jpg"
   alt="Screen Shot 6"
   title="Screen Shot 6"
   style="display: inline-block; margin: 0 auto; height: 680px; width: 380px">
