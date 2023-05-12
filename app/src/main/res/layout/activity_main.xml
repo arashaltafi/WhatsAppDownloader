@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="ltr"
+    tools:context=".activity.MainActivity"
+    tools:openDrawer="end">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_whatsapp"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_whatsapp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <fragment
+            android:id="@+id/nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bubbleNavigation"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:navGraph="@navigation/nav_main" />
+
+        <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+            android:id="@+id/bubbleNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bubbleItemGuide"
+                style="@style/bubble_navigation_item_style"
+                app:bt_icon="@drawable/ic_guide"
+                app:bt_title="@string/guide" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bubbleItemWhatsapp"
+                style="@style/bubble_navigation_item_style"
+                app:bt_active="true"
+                app:bt_icon="@drawable/ic_whats_app"
+                app:bt_title="@string/whatsapp_status" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bubbleItemBusiness"
+                style="@style/bubble_navigation_item_style"
+                app:bt_icon="@drawable/ic_business_whatsapp"
+                app:bt_title="@string/business_status" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/bubbleItemDownloads"
+                style="@style/bubble_navigation_item_style"
+                app:bt_icon="@drawable/ic_download"
+                app:bt_title="@string/downloads" />
+
+        </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/white"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="rtl"
+        app:headerLayout="@layout/header_menu"
+        app:itemIconSize="22sp"
+        app:itemIconTint="@color/green"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/navigation_view_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

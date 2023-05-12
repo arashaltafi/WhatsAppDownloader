@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_item_guide"
+        android:icon="@drawable/ic_guide"
+        android:title="@string/guide" />
+
+    <item
+        android:id="@+id/nav_item_share_app"
+        android:icon="@drawable/ic_share"
+        android:title="@string/share_app" />
+
+    <item
+        android:id="@+id/nav_item_other_app"
+        android:icon="@drawable/ic_other_app"
+        android:title="@string/other_apps" />
+
+    <item
+        android:id="@+id/nav_item_comment"
+        android:icon="@drawable/ic_comment"
+        android:title="@string/comment" />
+
+    <item
+        android:id="@+id/nav_item_about_us"
+        android:icon="@drawable/ic_about_us"
+        android:title="@string/about_us" />
+
+    <item
+        android:id="@+id/nav_item_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="@string/exit" />
+
+</menu>

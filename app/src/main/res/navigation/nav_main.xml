@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/whatsapp_status_fragment">
+    <fragment
+        android:id="@+id/guide_fragment"
+        android:name="com.arash.altafi.whatsappdownloder.fragment.GuideFragment"
+        android:label="GuideFragment"
+        tools:layout="@layout/fragment_guide" />
+    <fragment
+        android:id="@+id/whatsapp_status_fragment"
+        android:name="com.arash.altafi.whatsappdownloder.fragment.StatusFragment"
+        android:label="WhatsappStatusFragment"
+        tools:layout="@layout/fragment_whatsapp_status" />
+    <fragment
+        android:id="@+id/wb_status_fragment"
+        android:name="com.arash.altafi.whatsappdownloder.fragment.StatusFragment"
+        android:label="WbStatusFragment"
+        tools:layout="@layout/fragment_whatsapp_status" />
+    <fragment
+        android:id="@+id/saved_status_fragment"
+        android:name="com.arash.altafi.whatsappdownloder.fragment.StatusFragment"
+        android:label="SavedStatusFragment"
+        tools:layout="@layout/fragment_whatsapp_status" />
+    <fragment
+        android:id="@+id/show_media_fragment"
+        android:name="com.arash.altafi.whatsappdownloder.fragment.ShowMediaFragment"
+        android:label="ShowMediaFragment"
+        tools:layout="@layout/fragment_show_media" />
+</navigation>
